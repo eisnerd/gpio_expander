@@ -32,7 +32,7 @@ int mcp23s17::getInterruptNumber(byte pin) {
 	int intNum = digitalPinToInterrupt(pin);
 	if (intNum != NOT_AN_INTERRUPT) {
 		#if defined (SPI_HAS_TRANSACTION)
-			SPI.usingInterrupt(intNum);
+//			SPI.usingInterrupt(intNum);
 		#endif
 		return intNum;
 	}
